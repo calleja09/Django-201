@@ -15,11 +15,10 @@
             <span>&nbsp;</span>
         {% endif %}
         <div>
-            {#TODO add user link to bio, photo, thumbnail and name #}
-            <a class="flex items-center" href="#">
+            <a class="flex items-center" href="{% url "profiles:detail" post.author.username %}">
                 {% thumbnail post.author.profile.image "373x373" crop="center" as im %}
                     <img class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block" src="{{im.url}}" ="avatar">
-                    {% endthumbnail %}
+                {% endthumbnail %}
                 <h1 class="text-gray-700 font-bold"> {{post.author.username}} </h1>
             </a>
         </div>
