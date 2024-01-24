@@ -2,7 +2,9 @@
 {% block title %}Homepage{% endblock  %}
 
 {% block body %}
-    {% for post in posts  %}
-        {% include "includes/post.html" with post=post is_detail=True%}
-    {% endfor %}
+    <div id="posts-container">
+        {% for post in posts  %}
+            {% include "includes/post.html" with post=post is_detail=True%}
+        {% endfor %}
+    </div>
 {% endblock  %}
