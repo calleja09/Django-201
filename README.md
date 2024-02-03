@@ -7,31 +7,31 @@ This is a project for Django 201 section in "The Ultimate 2023 Fullstack Web Dev
 ## Screenshots
 
 
-![Log in](./frontend/images/screenshots/login.png)
 *Login page*
+![Log in](./frontend/images/screenshots/login.png)
 ---
-![SignUp](./frontend/images/screenshots/sign_up.png)
 *Sign up Page*
+![SignUp](./frontend/images/screenshots/sign_up.png)
 ---
 
-![Homepage](./frontend/images/screenshots/homepage.png)
 *Homepage*
+![Homepage](./frontend/images/screenshots/homepage.png)
 ---
 
-![Create Post](./frontend/images/screenshots/create_post.png)
 *Creating New Post*
+![Create Post](./frontend/images/screenshots/create_post.png)
 ---
 
-![View and Edit Profie](./frontend/images/screenshots/view_and_edit_profile.png)
 *Viewing and Editing Profile Button*
+![View and Edit Profie](./frontend/images/screenshots/view_and_edit_profile.png)
 ---
 
-![Edit Profile](/frontend/images/screenshots/edit_profile.png)
 *Editing Profile*
+![Edit Profile](/frontend/images/screenshots/edit_profile.png)
 ---
+*Forgot Password before and after of logging in*
 ![Forgot Password](/frontend/images/screenshots/forgot_password.png)
 ![Forgot Password](/frontend/images/screenshots/forgot_password_after_login.png)
-*Forgot Password before and after of logging in*
 
 
 
