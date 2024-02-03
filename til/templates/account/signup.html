@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+<div class="container mx-auto">
+    <div class="bg-slate-100 drop-shadow-2xl mx-8 p-6 rounded-2xl items-center">
+        <h1 class="mb-5 text-3xl text-center">Sign up</h1>
+        <form id="signup_form" method="post" action="{% url 'account_signup' %}" novalidate>
+        {% include "account/_render_form.html" %}
+        {% include "account/_button.html" with text="Sign up" %}
+        </form>
+        <a class="self-center pt-8 text-xs text-blue-400 justify-self-center hover:text-blue-500" href="{{ login_url }}">Already have an account? Sign in.</a>
+    </div>
+</div>
+{% endblock %}

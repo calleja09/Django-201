@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="shortcut icon" type="image/jpg" href="{% static "favicon.ico" %}"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
-    <title>{% block title%}Default{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'allauth_ui/output.css' %}">
+    <title>{% block title%}Post It!{% endblock %}</title>
 </head>
 <body>
 
@@ -29,6 +30,18 @@
                         <a href="{% url "feed:new_post" %}" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 js-toggle-modal">
                         <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-plus-circle"></i></span>
                         <span class="text-sm font-medium">Create New Post</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url "profiles:detail" request.user %}" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                        <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-user-circle"></i></span>
+                        <span class="text-sm font-medium">Edit Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url "account_change_password" %}" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                        <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-user-circle"></i></span>
+                        <span class="text-sm font-medium">Change Password</span>
                         </a>
                     </li>
                     <li>
@@ -66,7 +79,7 @@
                     </div>
                     <hr>
                     <div class="w-full">
-                        <textarea name="new post" class="border-2 border-blue-500 my-6 js-post-text w-full" rows="3" placeholder="What's on your mind?" maxlength="240" data-post-url="{% url "feed:new_post" %}"></textarea>
+                        <textarea name="new post" class="border-1 border-slate-400 my-6 js-post-text w-full p-2" rows="3" placeholder="What's on your mind?" maxlength="240" data-post-url="{% url "feed:new_post" %}" style="resize:none"></textarea>
                     </div>
                     <hr>
                     <div class="ml-auto">

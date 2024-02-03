@@ -21,10 +21,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 from feed import urls as feed_urls
 from profiles import urls as profiles_urls
+from profiles import views as profiles_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include(feed_urls, namespace="feed")),
     path("profile/", include(profiles_urls, namespace="profiles")),
     re_path(r"", include("allauth.urls")),
+    path("update/", profiles_views.UpdateView, name="update"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -47,11 +47,19 @@ INSTALLED_APPS = [
     'feed',
     'profiles',
     'followers',
+    "allauth_ui",
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'sorl.thumbnail',
+    'widget_tweaks',
+    'crispy_forms',
+    'crispy_tailwind'
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -8,6 +8,10 @@ django = "*"
 django-allauth = "*"
 sorl-thumbnail = "*"
 pillow = "*"
+django-allauth-ui = "*"
+django-widget-tweaks = "*"
+django-crispy-forms = "*"
+crispy-tailwind = "*"
 
 [dev-packages]
 
