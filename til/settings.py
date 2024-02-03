@@ -162,6 +162,9 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend"
 )
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+
 STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, "frontend/")
 ]
