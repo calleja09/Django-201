@@ -30,12 +30,7 @@ SECRET_KEY = 'django-insecure-mykp=77*%tt&!&)f4%ig6-$9_3%ova-9z8hztsm_!kg%%1r=u(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '.vercel.app',
-    '.now.sh',
-    '127.0.0.1',
-    'localhost'
-]
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -182,7 +177,7 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_DIR, "frontend/")
+    os.path.join(BASE_DIR, "frontend/")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build',  "static")
 STATIC_URL = "/static/"
