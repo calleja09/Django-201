@@ -31,7 +31,10 @@ SECRET_KEY = 'django-insecure-mykp=77*%tt&!&)f4%ig6-$9_3%ova-9z8hztsm_!kg%%1r=u(
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '.vercel.app'
+    '.vercel.app',
+    '.now.sh',
+    '127.0.0.1',
+    'localhost'
 ]
 
 
@@ -101,10 +104,21 @@ WSGI_APPLICATION = 'til.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'F-F1**BbDGEE*fA-41CF**d3Cf13GA-a',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '42895'
     }
 }
 
@@ -172,7 +186,6 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = "/static/"
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

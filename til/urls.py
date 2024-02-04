@@ -29,4 +29,7 @@ urlpatterns = [
     path("profile/", include(profiles_urls, namespace="profiles")),
     re_path(r"", include("allauth.urls")),
     path("update/", profiles_views.UpdateView, name="update"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

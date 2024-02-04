@@ -1,4 +1,5 @@
 {% load thumbnail %}
+{% load static %}
 <!-- component -->
 <div class="max-w-4xl px-10 my-4 py-6 bg-white rounded-lg shadow-md" style="width: 50rem;">
     <div class="flex justify-between items-center">
@@ -18,6 +19,8 @@
             <a class="flex items-center" href="{% url "profiles:detail" post.author.username %}">
                 {% thumbnail post.author.profile.image "373x373" crop="center" as im %}
                     <img class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block" src="{{im.url}}" ="avatar">
+                {% empty %}
+                    <img src="{% static "images/default-avatar.png" %}" class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block">
                 {% endthumbnail %}
                 <h1 class="text-gray-700 font-bold"> {{post.author.username}} </h1>
             </a>
