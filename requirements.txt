@@ -5,7 +5,7 @@ charset-normalizer==3.3.2
 crispy-tailwind==1.0.0
 cryptography==42.0.1
 defusedxml==0.7.1
-Django>=3.2,<4.0
+Django
 django-allauth==0.60.1
 django-allauth-ui==0.2.1
 django-crispy-forms==2.1
