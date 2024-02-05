@@ -109,6 +109,7 @@ WSGI_APPLICATION = 'til.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+        'DATABASE_URL': 'postgresql://postgres:F-F1**BbDGEE*fA-41CF**d3Cf13GA-a@viaduct.proxy.rlwy.net:42895/railway',
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'F-F1**BbDGEE*fA-41CF**d3Cf13GA-a',
