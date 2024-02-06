@@ -28,7 +28,7 @@ MEDIA_URL = "/media/"
 SECRET_KEY = 'django-insecure-mykp=77*%tt&!&)f4%ig6-$9_3%ova-9z8hztsm_!kg%%1r=u('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost', '.railway.app']
 
@@ -173,11 +173,11 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend"
 )
 
-# if DEBUG:
-#     EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "frontend/")
+    os.path.join(BASE_DIR, "static/")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', "static")
 STATIC_URL = "/static/"
