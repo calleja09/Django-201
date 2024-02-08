@@ -95,6 +95,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'til.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.railway.app"
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
